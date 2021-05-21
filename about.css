@@ -1,0 +1,408 @@
+* {
+  box-sizing: border-box;
+  font-family: "montserrat", "poppins", "roboto", "san-serif";
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  width: 100%;
+}
+
+header {
+  padding: 30px 10%;
+  height: calc(100vh);
+  background: url("http://source.unsplash.com/vpOeXr5wmR4/1920x1080"), linear-gradient(225deg, #002a7a, rgba(0, 0, 0, 0.37));
+  background-blend-mode: overlay;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
+  -webkit-clip-path: polygon(0 0, 0 80%, 50% 100%, 100% 80%, 100% 0);
+          clip-path: polygon(0 0, 0 80%, 50% 100%, 100% 80%, 100% 0);
+  filter: drop-shadow(0 5px 15px 1px #000a);
+  display: flex;
+  flex-direction: column;
+}
+header div.navbar {
+  display: flex;
+  align-items: center;
+  height: 65px;
+}
+header div.navbar .title {
+  font-size: 2em;
+}
+header div.navbar .mob-menu {
+  display: none;
+}
+header div.navbar .menu-container a {
+  position: relative;
+  text-decoration: none;
+  color: white;
+  margin: 1.3em;
+  font-weight: 700;
+  font-size: 1.2em;
+}
+header div.navbar .menu-container a::after {
+  position: absolute;
+  display: block;
+  content: "";
+  background: white;
+  width: 0%;
+  height: 5px;
+  left: 0;
+  bottom: -5px;
+  transition: all 300ms ease;
+}
+header div.navbar .menu-container a:hover::after {
+  width: 100%;
+}
+header div.hero {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+header div.hero h1 {
+  font-size: 2.5em;
+}
+header div.hero .action-buttons {
+  margin-top: 3em;
+}
+header div.hero .action-buttons a {
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  padding: 10px 30px;
+  min-width: 200px;
+  font-weight: 600;
+  font-size: 0.9em;
+  text-transform: uppercase;
+  margin-right: 15px;
+  outline: none;
+  background: transparent;
+  border: 2px solid white;
+  border-radius: 5px;
+  transition: all 300ms ease;
+}
+header div.hero .action-buttons a.primary {
+  background: white;
+  color: #002a7a;
+}
+header div.hero .action-buttons a.primary:hover {
+  background: #eee;
+  border-color: #eee;
+}
+header div.hero .action-buttons a:not(.primary) {
+  border: 2px solid white;
+  color: white;
+}
+header div.hero .action-buttons a:not(.primary):hover {
+  background: #fff5;
+  border-color: #fff5;
+}
+header div.bottom {
+  height: 20%;
+}
+
+#services {
+  padding: 50px 10%;
+}
+#services .title {
+  text-align: center;
+  font-size: 1.6em;
+  text-transform: uppercase;
+  color: #002a7a;
+  margin: 30px;
+}
+#services .topic-container {
+  margin: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 100px 50px;
+}
+#services .topic-container .topic {
+  display: flex;
+  flex-direction: column;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+  padding: 30px;
+  border-radius: 10px;
+  min-width: 250px;
+}
+#services .topic-container .topic .title {
+  margin: 0;
+  font-size: 1.1em;
+  text-align: left;
+  font-weight: 700;
+}
+#services .topic-container .topic img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 200px;
+  border-radius: 15px;
+  margin: 20px 0;
+}
+#services .topic-container .topic .desc {
+  font-weight: 600;
+  line-height: 1.7em;
+}
+
+#about {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  background: #002a7a;
+  color: white;
+  padding: 30px 10%;
+  -webkit-clip-path: polygon(0 25%, 0 100%, 100% 75%, 100% 0);
+          clip-path: polygon(0 25%, 0 100%, 100% 75%, 100% 0);
+}
+#about .profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#about .profile img.my_photo {
+  width: 80%;
+}
+#about .profile .name {
+  margin: 15px 0;
+  font-size: 1.5em;
+  font-weight: 600;
+}
+#about .profile .social-links {
+  display: flex;
+  align-items: center;
+}
+#about .profile .social-links a {
+  text-decoration: none;
+  color: white;
+  margin: 10px;
+}
+#about .bio {
+  flex: 1;
+  padding: 5%;
+}
+#about .bio .title {
+  display: block;
+  font-size: 1.7em;
+  margin: 15px 0;
+  font-weight: 700;
+}
+#about .bio p {
+  font-size: 1.3em;
+  line-height: 1.4em;
+}
+
+#my_skills {
+  padding: 50px 10%;
+  display: flex;
+  flex-direction: column;
+}
+#my_skills .title {
+  text-align: center;
+  font-size: 1.6em;
+  text-transform: uppercase;
+  color: #002a7a;
+  margin: 30px;
+  font-weight: 700;
+}
+#my_skills .skill-list {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+  grid-gap: 40px;
+  align-items: center;
+  justify-content: center;
+}
+#my_skills .skill-list .skillholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  padding: 45px;
+  border-radius: 15px;
+}
+#my_skills .skill-list .skillholder img {
+  height: 60px;
+}
+#my_skills .skill-list .skillholder .lang {
+  text-transform: uppercase;
+  margin-top: 15px;
+  font-size: 1.4em;
+}
+
+footer {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  color: white;
+  background: #002a7a;
+  padding: 15px;
+}
+footer span:not(.right) {
+  flex: 1;
+}
+footer .right {
+  text-transform: uppercase;
+  font-size: small;
+  font-weight: 800;
+}
+
+.flex-1 {
+  flex: 1 1 auto;
+}
+
+@media screen and (max-width: 850px) {
+  header {
+    padding: 30px 3%;
+    -webkit-clip-path: none;
+            clip-path: none;
+  }
+  header .bottom {
+    display: none;
+  }
+  header .navbar .menu-container a {
+    font-size: 1em !important;
+  }
+
+  #about {
+    flex-direction: column;
+    height: auto;
+    -webkit-clip-path: none;
+            clip-path: none;
+    position: relative;
+    margin: 300px 0;
+  }
+  #about::before, #about::after {
+    position: absolute;
+    content: "";
+    display: block;
+    height: 200px;
+    width: 100%;
+    background: #002a7a;
+  }
+  #about::before {
+    -webkit-clip-path: polygon(0 100%, 100% 0, 100% 100%);
+            clip-path: polygon(0 100%, 100% 0, 100% 100%);
+    bottom: 99.9%;
+  }
+  #about::after {
+    -webkit-clip-path: polygon(0 0%, 0 100%, 100% 0%);
+            clip-path: polygon(0 0%, 0 100%, 100% 0%);
+    top: 99.9%;
+  }
+}
+@media screen and (max-width: 650px) {
+  header {
+    padding: 30px;
+  }
+  header .hero h1 {
+    font-weight: 500;
+  }
+  header .hero .action-buttons a.primary {
+    margin-bottom: 15px;
+  }
+  header .navbar .mob-menu {
+    display: block !important;
+    padding: 5px;
+    background: transparent;
+    outline: none;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    width: 45px;
+  }
+  header .navbar .mob-menu span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: white;
+    transition: all 300ms ease-in-out;
+  }
+  header .navbar .mob-menu span:nth-child(2) {
+    margin: 5px 0;
+  }
+  header .navbar .mob-menu:hover span:nth-child(2) {
+    margin-left: 40%;
+    width: 60%;
+  }
+  header .navbar .mob-menu:hover span:nth-child(3) {
+    margin-left: 65%;
+    width: 35%;
+  }
+  header .menu-container {
+    display: none;
+  }
+}
+.mobile_menu {
+  position: fixed;
+  z-index: 100;
+  background: #0e1c35;
+  top: -100%;
+  width: 100%;
+  height: 100vh;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all 400ms ease-in-out;
+}
+.mobile_menu.active {
+  top: 0;
+}
+.mobile_menu a {
+  text-decoration: none;
+  color: white;
+  font-size: 3em;
+  margin: 15px 5px;
+  font-weight: 800;
+  position: relative;
+}
+.mobile_menu a::after {
+  position: absolute;
+  content: "";
+  height: 9px;
+  width: 0%;
+  bottom: -5px;
+  display: block;
+  background: white;
+  transition: all 400ms ease;
+}
+.mobile_menu a:hover::after {
+  width: 100%;
+}
+.mobile_menu button.close {
+  position: absolute;
+  top: 80px;
+  right: 80px;
+  background: transparent;
+  outline: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.mobile_menu button.close span {
+  position: absolute;
+  display: block;
+  background: white;
+  width: 40px;
+  height: 5px;
+  margin: 5px;
+}
+.mobile_menu button.close span:nth-child(1) {
+  transform: rotate(45deg);
+}
+.mobile_menu button.close span:nth-child(2) {
+  transform: rotate(-45deg);
+}
+.mobile_menu button.close:hover {
+  transform: scale(0.8);
+}/*# sourceMappingURL=about.css.map */

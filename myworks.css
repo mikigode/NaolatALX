@@ -1,0 +1,170 @@
+.image-slider {
+  position: relative;
+  height: calc(100vh - 150px);
+  overflow: hidden;
+  width: 100%;
+}
+.image-slider::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+.image-slider .container {
+  height: 100%;
+  position: relative;
+}
+.image-slider .container .indicators {
+  position: absolute;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  z-index: 1000;
+}
+.image-slider .container .indicators span {
+  display: block;
+  height: 10px;
+  width: 10px;
+  border: 2px solid white;
+  border-radius: 50%;
+  margin: 10px;
+  transition: all 500ms ease-in-out;
+}
+.image-slider .container .indicators span.active {
+  background: white;
+  height: 15px;
+  width: 15px;
+}
+.image-slider .container .slide {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.image-slider .container .slide img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  -webkit-animation: slideimg 500ms ease;
+          animation: slideimg 500ms ease;
+}
+.image-slider .container .slide h1 {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transform: translateY(-50%);
+  text-align: center;
+  color: white;
+  z-index: 15;
+  text-shadow: 0 2px 15px #000;
+  -webkit-animation: slidetext 1000ms ease 500ms;
+          animation: slidetext 1000ms ease 500ms;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+}
+
+main article section.article {
+  padding: 30px;
+}
+main article section.article .topic {
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+  border-radius: 10px;
+  margin: 20px 0;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}
+main article section.article .topic img {
+  margin: 15px 0;
+  height: 400px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+  border-radius: 15px;
+}
+main article section.article .topic p.desc {
+  font-size: 1.4em;
+  line-height: 1.5em;
+  font-weight: 500;
+  margin-bottom: 50px;
+}
+main article section.article .topic .chips {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+main article section.article .topic .chips .chip {
+  margin: 5px;
+  text-transform: uppercase;
+  padding: 8px 15px;
+  color: #008cff;
+  border: 2px solid #008cff;
+  border-radius: 25px;
+}
+main article section.article .topic .links {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+main article section.article .topic .links .show {
+  width: 100px;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  background: #008cff;
+  padding: 10px 15px;
+  display: inline-block;
+  border-radius: 5px;
+  margin: 10px 10px;
+}
+
+@-webkit-keyframes slidetext {
+  from {
+    top: 0;
+    opacity: 0;
+  }
+  to {
+    top: 50%;
+    opacity: 1;
+  }
+}
+
+@keyframes slidetext {
+  from {
+    top: 0;
+    opacity: 0;
+  }
+  to {
+    top: 50%;
+    opacity: 1;
+  }
+}
+@-webkit-keyframes slideimg {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes slideimg {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}/*# sourceMappingURL=myworks.css.map */
